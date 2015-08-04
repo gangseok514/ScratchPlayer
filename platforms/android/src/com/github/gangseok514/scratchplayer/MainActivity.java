@@ -21,6 +21,7 @@ package com.github.gangseok514.scratchplayer;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
+import android.content.pm.ActivityInfo;
 
 public class MainActivity extends CordovaActivity
 {
@@ -28,6 +29,7 @@ public class MainActivity extends CordovaActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
     }
